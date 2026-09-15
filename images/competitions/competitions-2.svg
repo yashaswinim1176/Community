@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#F76B6B"/>
+    </linearGradient>
+    <pattern id="dots6" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="rgba(255,255,255,0.16)"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="400" fill="#0A0E17"/>
+  <rect width="640" height="400" fill="url(#grad6)" opacity="0.22"/>
+  <rect width="640" height="400" fill="url(#dots6)"/>
+  <rect x="0" y="332" width="640" height="68" fill="#0A0E17" opacity="0.55"/>
+  <text x="40" y="230" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="120" font-weight="700" fill="url(#grad6)" opacity="0.9">[ ]</text>
+  <text x="40" y="370" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="26" font-weight="600" fill="#E8EAF0">Competitions #2</text>
+  <circle cx="580" cy="70" r="46" fill="url(#grad6)" opacity="0.5"/>
+  <circle cx="600" cy="150" r="10" fill="url(#grad6)" opacity="0.8"/>
+</svg>

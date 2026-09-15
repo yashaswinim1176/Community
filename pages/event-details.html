@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Details — NEXUS</title>
+  <meta name="description" content="Full details for a NEXUS community event." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Page-specific layout for the details view only.
+       Kept here rather than in style.css since it applies to this page alone. */
+    .details-hero {
+      position: relative;
+      border-radius: var(--radius-l);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: var(--space-4);
+    }
+    .details-hero img {
+      width: 100%;
+      aspect-ratio: 21 / 8;
+      object-fit: cover;
+    }
+    .details-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(10, 14, 23, 0.92) 0%, rgba(10, 14, 23, 0.2) 60%);
+      display: flex;
+      align-items: flex-end;
+      padding: var(--space-4);
+    }
+    .details-hero-overlay h1 {
+      font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+      max-width: 28ch;
+    }
+    .breadcrumb {
+      color: var(--text-faint);
+      font-size: 0.85rem;
+      margin-bottom: var(--space-3);
+    }
+    .breadcrumb a {
+      color: var(--accent-2);
+    }
+    .details-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: var(--space-5);
+      align-items: start;
+    }
+    .details-block {
+      margin-bottom: var(--space-4);
+    }
+    .details-block h2 {
+      font-size: 1.2rem;
+      margin-bottom: var(--space-2);
+    }
+    .details-block p {
+      color: var(--text-muted);
+    }
+    .rules-list,
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .rules-list li {
+      color: var(--text-muted);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .rules-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-2);
+    }
+    .schedule-list {
+      display: flex;
+      flex-direction: column;
+      border-left: 2px solid var(--border);
+    }
+    .schedule-item {
+      position: relative;
+      padding: 0 0 var(--space-3) var(--space-4);
+    }
+    .schedule-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-grad);
+    }
+    .schedule-time {
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: var(--accent-2);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .faq-item {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-s);
+      overflow: hidden;
+      background: rgba(14, 18, 30, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .faq-item:hover {
+      border-color: rgba(255, 255, 255, 0.45);
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: var(--space-3);
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::after {
+      content: "+";
+      color: var(--accent-2);
+      font-size: 1.2rem;
+    }
+    .faq-item[open] summary::after {
+      content: "\2212";
+    }
+    .faq-item p {
+      padding: 0 var(--space-3) var(--space-3);
+      color: var(--text-muted);
+    }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-l);
+      padding: var(--space-4);
+      position: sticky;
+      top: 96px;
+    }
+    .sidebar-row {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      padding-block: var(--space-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-row:last-of-type {
+      border-bottom: none;
+    }
+    .sidebar-row svg {
+      color: var(--accent-2);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .sidebar-row strong {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+    .sidebar-row span.val {
+      font-size: 0.95rem;
+    }
+    .sidebar-card .btn {
+      margin-top: var(--space-3);
+    }
+    .not-found {
+      text-align: center;
+      padding: var(--space-6) var(--space-3);
+    }
+    .not-found h1 {
+      margin-bottom: var(--space-2);
+    }
+    .not-found p {
+      color: var(--text-muted);
+      margin-bottom: var(--space-3);
+    }
+    @media (max-width: 900px) {
+      .details-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-card {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 3D Cosmic Galaxy Background (MagNovite-inspired) -->
+  <div id="cosmic-bg" aria-hidden="true"></div>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        NEXUS
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#events">Events</a></li>
+          <li><a href="../index.html#categories">Categories</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn btn-secondary btn-sm">Join Community</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section>
+      <div class="container" id="detailsContainer">
+        <!-- Rendered dynamically by event-details.js below -->
+        <p class="breadcrumb">Loading event…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> NEXUS Technical Community. Built by students.</p>
+      <div class="footer-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#events">Events</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Load every data file so this page can look up any event by id,
+       then the shared script.js (for ALL_EVENTS + icons + nav helpers),
+       then this page's own rendering logic. -->
+  <script src="../js/hackathons.js"></script>
+  <script src="../js/workshops.js"></script>
+  <script src="../js/competitions.js"></script>
+  <script src="../js/seminars.js"></script>
+  <script src="../js/events.js"></script>
+  <script>
+    // Build the same combined list script.js builds, without needing
+    // to run script.js's homepage-only rendering code on this page.
+    const ALL_EVENTS = [
+      ...hackathons.map((e) => ({ ...e, type: "hackathon" })),
+      ...workshops.map((e) => ({ ...e, type: "workshop" })),
+      ...competitions.map((e) => ({ ...e, type: "competition" })),
+      ...seminars.map((e) => ({ ...e, type: "seminar" })),
+      ...events.map((e) => ({ ...e, type: "event" }))
+    ];
+  </script>
+  <script src="../js/event-details.js"></script>
+  <!-- 3D Galaxy Cosmic Background Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../js/cosmic-background.js"></script>
+</body>
+</html>
