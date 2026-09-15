@@ -1,4 +1,4 @@
-﻿# 🌌 NEXUS — College Technical Community Platform
+# 🌌 NEXUS — College Technical Community Platform
 
 [![Live Demo](https://img.shields.io/badge/Live%20Website-Vercel-black?style=for-the-badge&logo=vercel)](https://nexus-community-web.vercel.app)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-white?style=for-the-badge&logo=three.js&logoColor=black)](https://threejs.org/)
@@ -41,7 +41,7 @@
 
 ## 📂 Project Structure
 
-`
+```
 community-website/
 │
 ├── index.html                   # Main landing page & hero section
@@ -69,7 +69,7 @@ community-website/
 │
 ├── .gitignore                   # Git ignore configuration
 └── README.md                    # Project documentation & live links
-`
+```
 
 ---
 
@@ -78,14 +78,14 @@ community-website/
 Because NEXUS is built with clean vanilla web standards, no build tools or package installations are required.
 
 ### Run with Python:
-`ash
+```bash
 python -m http.server 8000
-`
+```
 
 ### Run with Node.js:
-`ash
+```bash
 npx serve .
-`
+```
 
 Open your browser at **http://localhost:8000**.
 
@@ -96,16 +96,16 @@ Open your browser at **http://localhost:8000**.
 This repository is optimized for instant deployment on [Vercel](https://vercel.com).
 
 ### Deploy via Vercel CLI:
-`ash
+```bash
 # 1. Login to Vercel
 npx vercel login yashaswinim1176@gmail.com
 
 # 2. Deploy to production
 npx vercel --prod --yes
-`
+```
 
 ### Deploy via GitHub:
-1. Push this repository to your GitHub account: https://github.com/yashaswinim1176/community-website
+1. Push this repository to your GitHub account: https://github.com/yashaswinim1176/Community
 2. Go to [Vercel Dashboard](https://vercel.com/new).
 3. Import the repository and click **Deploy**.
 
