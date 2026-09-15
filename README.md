@@ -1,6 +1,6 @@
 # 🌌 NEXUS — College Technical Community Platform
 
-[![Live Demo](https://img.shields.io/badge/Live%20Website-Vercel-black?style=for-the-badge&logo=vercel)](https://nexus-community-web.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Website-Vercel-black?style=for-the-badge&logo=vercel)](https://community-web-main.vercel.app)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-white?style=for-the-badge&logo=three.js&logoColor=black)](https://threejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
@@ -10,7 +10,7 @@
 
 ## 🌐 Live Website URL
 
-🔗 **Live Deployment:** [https://nexus-community-web.vercel.app](https://nexus-community-web.vercel.app) *(Deployment Link)*
+🔗 **Live Deployment:** [https://community-web-main.vercel.app](https://community-web-main.vercel.app)
 
 ---
 
