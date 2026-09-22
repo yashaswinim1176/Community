@@ -1,4 +1,4 @@
-# 🌌 NEXUS — College Technical Community Platform
+# 🌌 Orbit 3.0 — College Technical Community Platform
 
 [![Live Demo](https://img.shields.io/badge/Live%20Website-Vercel-black?style=for-the-badge&logo=vercel)](https://community-web-main.vercel.app)
 [![Three.js](https://img.shields.io/badge/Three.js-r128-white?style=for-the-badge&logo=three.js&logoColor=black)](https://threejs.org/)
@@ -11,6 +11,19 @@
 ## 🌐 Live Website URL
 
 🔗 **Live Deployment:** [https://community-web-main.vercel.app](https://community-web-main.vercel.app)
+
+---
+
+## 🚀 Recent Code Updates (Orbit 3.0)
+
+- **🎨 Rebranding to Orbit 3.0**: Fully transformed community identity to **Orbit 3.0** with bespoke SVG vector orbit iconography across all landing pages and event detail templates.
+- **📊 Updated Community Impact Metrics**:
+  - **20+** Active community members
+  - **15+** Technical events and hackathons hosted per year
+  - **5** Dedicated industry & alumni mentor partners
+- **📬 Synced Communication Channels**: Updated contact endpoints and social handles to `Orbit 3.0.community@college.edu`.
+- **⚡ Synchronized Event Details & Navbar**: Consistent Orbit 3.0 branding and logos integrated into both `index.html` and `pages/event-details.html`.
+- **☁️ Continuous Vercel Deployment**: Live production pipeline verified and serving latest code at [community-web-main.vercel.app](https://community-web-main.vercel.app).
 
 ---
 
@@ -75,7 +88,7 @@ community-website/
 
 ## 🚀 Getting Started (Local Development)
 
-Because NEXUS is built with clean vanilla web standards, no build tools or package installations are required.
+Because Orbit 3.0 is built with clean vanilla web standards, no build tools or package installations are required.
 
 ### Run with Python:
 ```bash
