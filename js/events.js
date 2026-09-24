@@ -27,4 +27,4 @@ const events = [
       { time: "2:30 PM", activity: "Show and tell" }
     ],
     faq: [{ q: "Do I need prior open-source experience?", a: "No, this event is designed for first-time contributors." }]
-  } ]
+  } ];
