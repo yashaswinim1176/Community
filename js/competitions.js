@@ -31,4 +31,4 @@ const competitions = [
     ],
     faq: [{ q: "Can I use an IDE?", a: "Yes, any local IDE is fine as long as you submit through the judge." }]
   }
-]
+];
