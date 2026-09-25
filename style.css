@@ -1032,8 +1032,8 @@ section {
 
 .benefit-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 194, 168, 0.5);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 25px -4px rgba(0, 194, 168, 0.3);
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85), 0 0 25px -4px rgba(255, 255, 255, 0.35);
 }
 
 .benefit-icon {
@@ -1043,18 +1043,18 @@ section {
   display: grid;
   place-items: center;
   margin-bottom: var(--space-3);
-  background: rgba(91, 110, 245, 0.16);
-  border: 1px solid rgba(91, 110, 245, 0.3);
-  color: #8c6cf7;
-  transition: transform 0.3s var(--ease), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: transform 0.3s var(--ease), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .benefit-card:hover .benefit-icon {
   transform: scale(1.1) rotate(-4deg);
-  background: rgba(0, 194, 168, 0.2);
-  border-color: rgba(0, 194, 168, 0.6);
-  color: #00c2a8;
-  box-shadow: 0 0 20px rgba(0, 194, 168, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .benefit-card h3 {
@@ -1181,7 +1181,7 @@ section {
 .contact-section {
   position: relative;
   background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06), transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(0, 194, 168, 0.14), transparent 55%);
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.04), transparent 55%);
 }
 
 .contact-grid {
@@ -1219,13 +1219,14 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .channel:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 194, 168, 0.6);
-  box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 194, 168, 0.35);
+  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.6);
 }
 
 .channel-icon {
@@ -1234,16 +1235,19 @@ section {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: rgba(0, 194, 168, 0.16);
-  border: 1px solid rgba(0, 194, 168, 0.3);
-  color: var(--accent-2);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
   flex-shrink: 0;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s ease;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .channel:hover .channel-icon {
   transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 0 16px rgba(0, 194, 168, 0.6);
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
 }
 
 .channel strong {
