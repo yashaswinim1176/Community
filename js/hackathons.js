@@ -15,7 +15,7 @@ const hackathons = [
     date: "2026-10-17",
     time: "10:00 AM - 6:00 PM",
     venue: "Computer Science Lab, Block C",
-    image: "images/hackathons/hackathons-1.svg",
+    image: "images/hackathons/hackathons-1.png",
     registrationLink: "#register",
     status: "upcoming",
     teamSize: "2-4 Members",
@@ -38,4 +38,5 @@ const hackathons = [
       { q: "Do I need a team before registering?", a: "No, you can register solo and we'll help you find a team on the day." },
       { q: "Is there a registration fee?", a: "No, participation is free for all community members." }
     ]
-  } ];
+  }
+];
