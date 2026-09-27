@@ -7,7 +7,7 @@
 const hackathons = [
   {
     id: "hackathon-001",
-    title: "NEXUS AI Innovation Hackathon",
+    title: "Orbit 3.0 AI Innovation Hackathon",
     category: "Hackathon",
     description: "A 24-hour build sprint for AI-powered solutions to real campus and community problems.",
     longDescription:
