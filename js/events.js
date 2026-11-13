@@ -61,7 +61,7 @@ const events = [
     "A hands-on workshop introducing students to Google AI Studio and the process of building AI-powered applications using prompts, PRDs, APIs, frontend, and backend integration.",
   longDescription:
     "An interactive beginner-friendly session where students explore Google AI Studio, understand how AI-powered applications are planned and developed, and learn how frontend, backend, APIs, and Product Requirements Documents (PRDs) work together to turn an idea into a functional application.",
-  date: "10-10-2026",
+  date: "14-11-2026",
   time: "9:30 AM - 11:00 PM",
   venue: "Seminar hall - 1",
   image: "images/events/events-3.svg",
